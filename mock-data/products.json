@@ -1,0 +1,218 @@
+{
+  "products": [
+    {
+      "id": "wismin-bakuchiol-ampoule",
+      "brandId": "wismin",
+      "categoryId": "bakuchiol-antiaging",
+      "name": {
+        "en": "Bakuchiol All Day Young Ampoule",
+        "ko": "바쿠치올 올데이 영 앰플",
+        "zh": "补骨脂全天青春精华"
+      },
+      "description": {
+        "en": "Plant-based retinol alternative for sensitive skin",
+        "ko": "민감한 피부를 위한 식물성 레티놀 대체품",
+        "zh": "适合敏感肌肤的植物性视黄醇替代品"
+      },
+      "images": [
+        "/images/products/wismin-bakuchiol-ampoule-1.jpg",
+        "/images/products/wismin-bakuchiol-ampoule-2.jpg"
+      ],
+      "price": {
+        "item": 28.50,
+        "carton": 342.00,
+        "currency": "GBP"
+      },
+      "moq": 12,
+      "moqUnit": "items",
+      "itemsPerCarton": 12,
+      "certifications": ["CPNP_UK", "CPNP_EU", "CPNP_CH", "VEGAN"],
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "wismin-bakuchiol-set",
+      "brandId": "wismin",
+      "categoryId": "bakuchiol-antiaging",
+      "name": {
+        "en": "Bakuchiol Anti-Aging Ampoule Set (4x15ml)",
+        "ko": "바쿠치올 안티에이징 앰플 세트",
+        "zh": "补骨脂抗衰老精华套装"
+      },
+      "price": {
+        "item": 108.00,
+        "carton": 648.00,
+        "currency": "GBP"
+      },
+      "moq": 6,
+      "moqUnit": "sets",
+      "itemsPerCarton": 6,
+      "certifications": ["CPNP_UK", "CPNP_EU", "CPNP_CH", "VEGAN"],
+      "inStock": true
+    },
+    {
+      "id": "lalucell-cotton-cleanser",
+      "brandId": "lalucell",
+      "categoryId": "cotton-like-derma",
+      "name": {
+        "en": "Cotton Gentle Daily Cleanser",
+        "ko": "코튼 젠틀 데일리 클렌저",
+        "zh": "棉花温和日常洁面乳"
+      },
+      "description": {
+        "en": "Pregnancy-safe gentle cleanser with cotton extract",
+        "ko": "면 추출물이 함유된 임신 중 사용 가능한 순한 클렌저",
+        "zh": "含棉花提取物的孕期安全温和洁面乳"
+      },
+      "images": [
+        "/images/products/lalucell-cotton-cleanser-1.jpg"
+      ],
+      "price": {
+        "item": 24.00,
+        "carton": 288.00,
+        "currency": "GBP"
+      },
+      "moq": 12,
+      "moqUnit": "items",
+      "itemsPerCarton": 12,
+      "certifications": ["CPNP_UK", "CPNP_EU", "CPNP_CH"],
+      "badges": ["PREGNANCY_SAFE", "0_IRRITATION"],
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "lalucell-barrier-serum",
+      "brandId": "lalucell",
+      "categoryId": "cotton-like-derma",
+      "name": {
+        "en": "Cotton Barrier Repair Serum",
+        "ko": "코튼 배리어 리페어 세럼",
+        "zh": "棉花屏障修复精华"
+      },
+      "price": {
+        "item": 32.00,
+        "carton": 384.00,
+        "currency": "GBP"
+      },
+      "moq": 12,
+      "moqUnit": "items",
+      "itemsPerCarton": 12,
+      "certifications": ["CPNP_UK", "CPNP_EU", "CPNP_CH"],
+      "badges": ["PREGNANCY_SAFE", "ELASOME_TECH"],
+      "inStock": true
+    },
+    {
+      "id": "sunnicorn-calming-toner",
+      "brandId": "sunnicorn",
+      "categoryId": "veagan-allinone",
+      "name": {
+        "en": "I'm Proud of You Calming Toner",
+        "ko": "아임 프라우드 오브 유 카밍 토너",
+        "zh": "我为你骄傲舒缓爽肤水"
+      },
+      "description": {
+        "en": "Upcycled cucumber and apple extract toner for sensitive skin",
+        "ko": "민감한 피부를 위한 업사이클 오이와 사과 추출물 토너",
+        "zh": "适合敏感肌肤的升级再造黄瓜苹果精华爽肤水"
+      },
+      "images": [
+        "/images/products/sunnicorn-calming-toner-1.jpg"
+      ],
+      "price": {
+        "item": 12.88,
+        "carton": 154.56,
+        "currency": "GBP"
+      },
+      "moq": 12,
+      "moqUnit": "items",
+      "itemsPerCarton": 12,
+      "certifications": ["CPNP_UK", "CPNP_EU", "CPNP_CH", "VEGAN", "CARBON_NEUTRAL"],
+      "badges": ["UPCYCLED", "UGLY_FOOD", "SUSTAINABLE"],
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "sunnicorn-hydrating-cream",
+      "brandId": "sunnicorn",
+      "categoryId": "veagan-allinone",
+      "name": {
+        "en": "Mushroom Deep Hydrating Cream",
+        "ko": "머쉬룸 딥 하이드레이팅 크림",
+        "zh": "蘑菇深层保湿霜"
+      },
+      "price": {
+        "item": 23.18,
+        "carton": 278.16,
+        "currency": "GBP"
+      },
+      "moq": 12,
+      "moqUnit": "items",
+      "itemsPerCarton": 12,
+      "certifications": ["CPNP_UK", "CPNP_EU", "CPNP_CH", "VEGAN"],
+      "badges": ["UPCYCLED", "100%_VEGAN"],
+      "inStock": true
+    },
+    {
+      "id": "wismin-cottonseed-cream",
+      "brandId": "wismin",
+      "categoryId": "cottonseed-care",
+      "name": {
+        "en": "Cottonseed Cica Defense Barrier Cream",
+        "ko": "목화씨 시카 디펜스 배리어 크림",
+        "zh": "棉籽积雪草防御屏障霜"
+      },
+      "price": {
+        "item": 26.40,
+        "carton": 316.80,
+        "currency": "GBP"
+      },
+      "moq": 12,
+      "moqUnit": "items",
+      "itemsPerCarton": 12,
+      "certifications": ["CPNP_UK", "CPNP_EU", "CPNP_CH", "EWG"],
+      "inStock": true
+    },
+    {
+      "id": "lalucell-hydrogel-mask",
+      "brandId": "lalucell",
+      "categoryId": "cotton-like-derma",
+      "name": {
+        "en": "E-Beam Hydrogel Mask",
+        "ko": "이-빔 하이드로겔 마스크",
+        "zh": "电子束水凝胶面膜"
+      },
+      "price": {
+        "item": 6.00,
+        "carton": 144.00,
+        "currency": "GBP"
+      },
+      "moq": 24,
+      "moqUnit": "items",
+      "itemsPerCarton": 24,
+      "certifications": ["CPNP_UK", "CPNP_EU", "CPNP_CH"],
+      "badges": ["PREGNANCY_SAFE", "PATENTED_TECH"],
+      "inStock": true
+    },
+    {
+      "id": "sunnicorn-sun-essence",
+      "brandId": "sunnicorn",
+      "categoryId": "sun-protection",
+      "name": {
+        "en": "Bambu Soothing UV Sun Essence",
+        "ko": "밤부 수딩 UV 선 에센스",
+        "zh": "竹子舒缓防晒精华"
+      },
+      "price": {
+        "item": 14.65,
+        "carton": 175.80,
+        "currency": "GBP"
+      },
+      "moq": 12,
+      "moqUnit": "items",
+      "itemsPerCarton": 12,
+      "certifications": ["CPNP_UK", "CPNP_EU", "CPNP_CH", "VEGAN", "REEF_SAFE"],
+      "spf": "SPF50+ PA++++",
+      "inStock": true
+    }
+  ]
+}
