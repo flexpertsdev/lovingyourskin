@@ -1,5 +1,6 @@
 import { BrowserRouter } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ComponentDemo } from './pages/ComponentDemo'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -14,14 +15,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <div className="min-h-screen bg-light-gray">
-          <h1 className="text-center py-8 text-4xl font-light text-deep-charcoal">
-            Loving Your Skin - Under Construction
-          </h1>
-          <p className="text-center text-text-secondary">
-            B2B Korean Beauty Marketplace
-          </p>
-        </div>
+        <ComponentDemo />
       </BrowserRouter>
     </QueryClientProvider>
   )
