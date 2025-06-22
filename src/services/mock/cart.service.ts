@@ -1,6 +1,5 @@
 // Mock cart service with MOQ validation and per-brand grouping
 import { Cart, CartItem, Product, MOQStatus } from '../../types'
-import { productService } from './product.service'
 
 const CART_STORAGE_KEY = 'lys_shopping_cart'
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
