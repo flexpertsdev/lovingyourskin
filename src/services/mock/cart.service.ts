@@ -140,6 +140,7 @@ export const cartService = {
       return {
         brandId,
         brandName: '',
+        status: 'error',
         met: false,
         current: 0,
         required: 0,
@@ -158,10 +159,14 @@ export const cartService = {
     const percentage = Math.min((totalItems / moqRequired) * 100, 100)
     const remainingItems = Math.max(moqRequired - totalItems, 0)
     
+    const met = totalItems >= moqRequired
+    const status = met ? 'met' : percentage >= 80 ? 'warning' : 'error'
+    
     return {
       brandId,
       brandName,
-      met: totalItems >= moqRequired,
+      status,
+      met,
       current: totalItems,
       required: moqRequired,
       percentage,

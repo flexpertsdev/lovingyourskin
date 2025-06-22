@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useAuthStore } from '../../stores/auth.store'
+import { useCartStore } from '../../stores/cart.store'
 import { Button } from '../ui'
 import { cn } from '../../lib/utils/cn'
 
@@ -13,6 +14,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { label: 'Brands', href: '/brands' },
+  { label: 'Cart', href: '/cart' },
   { label: 'How It Works', href: '/how-it-works' },
   { label: 'For Brands', href: '/for-brands' },
   { label: 'For Retailers', href: '/for-retailers' },
@@ -27,6 +29,7 @@ const authNavItems: NavItem[] = [
 export const Header: React.FC = () => {
   const location = useLocation()
   const { user } = useAuthStore()
+  const { getTotalItems } = useCartStore()
   const [language, setLanguage] = useState('EN')
   
   const isAuthenticated = !!user
@@ -84,8 +87,13 @@ export const Header: React.FC = () => {
             {isAuthenticated ? (
               <div className="flex items-center gap-3">
                 <Link to="/cart">
-                  <Button variant="secondary" size="small">
+                  <Button variant="secondary" size="small" className="relative">
                     Cart
+                    {getTotalItems() > 0 && (
+                      <span className="absolute -top-2 -right-2 bg-rose-gold text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                        {getTotalItems()}
+                      </span>
+                    )}
                   </Button>
                 </Link>
                 <Link to="/profile">

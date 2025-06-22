@@ -49,6 +49,7 @@ export const transformProductData = (rawProduct: any): Product => {
       zh: description
     },
     category: rawProduct.category || 'Skincare',
+    packSize: rawProduct.packSize || String(rawProduct.itemsPerCarton || 12),
     volume: rawProduct.volume || '50ml',
     stockLevel: rawProduct.stockLevel || (rawProduct.inStock ? 'in' : 'out'),
     leadTime: rawProduct.leadTime || '3-5 days',

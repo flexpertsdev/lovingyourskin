@@ -68,6 +68,7 @@ export interface Product {
   moq: number // Minimum order quantity
   moqUnit: 'items' | 'cartons'
   itemsPerCarton: number
+  packSize: string // e.g. "12", "24" - number per carton/pack
   volume: string // e.g. "50ml", "100g"
   ingredients?: string[]
   certifications: CertificationType[]
@@ -149,6 +150,7 @@ export interface Cart {
 export interface MOQStatus {
   brandId: string
   brandName: string
+  status: 'met' | 'warning' | 'error'
   met: boolean
   current: number
   required: number

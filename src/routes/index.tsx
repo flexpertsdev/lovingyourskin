@@ -7,6 +7,8 @@ import { Brands } from '../pages/Brands'
 import { BrandDetail } from '../pages/BrandDetail'
 import { ProductDetail } from '../pages/ProductDetail'
 import { Test } from '../pages/Test'
+import { Cart } from '../pages/Cart'
+import { Checkout } from '../pages/Checkout'
 
 export const AppRoutes: React.FC = () => {
   return (
@@ -29,7 +31,8 @@ export const AppRoutes: React.FC = () => {
       <Route path="/for-brands" element={<div className="p-8 text-center">For Brands - Coming Soon</div>} />
       <Route path="/for-retailers" element={<div className="p-8 text-center">For Retailers - Coming Soon</div>} />
       <Route path="/dashboard" element={<div className="p-8 text-center">Dashboard - Coming Soon</div>} />
-      <Route path="/cart" element={<div className="p-8 text-center">Cart - Coming Soon</div>} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/checkout" element={<Checkout />} />
       <Route path="/profile" element={<div className="p-8 text-center">Profile - Coming Soon</div>} />
       <Route path="/orders" element={<div className="p-8 text-center">Orders - Coming Soon</div>} />
       <Route path="/messages" element={<div className="p-8 text-center">Messages - Coming Soon</div>} />
