@@ -28,9 +28,10 @@ const authNavItems: NavItem[] = [
 
 export const Header: React.FC = () => {
   const location = useLocation()
-  const { user } = useAuthStore()
+  const { user, logout } = useAuthStore()
   const { getTotalItems } = useCartStore()
   const [language, setLanguage] = useState('EN')
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   
   const isAuthenticated = !!user
   const isActive = (href: string) => location.pathname === href
@@ -120,12 +121,133 @@ export const Header: React.FC = () => {
         </div>
         
         {/* Mobile Menu Button */}
-        <button className="md:hidden p-2">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+        <button 
+          className="md:hidden p-2"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
         </button>
       </nav>
+      
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden fixed inset-0 z-50 bg-white">
+          <div className="flex flex-col h-full">
+            {/* Mobile Header */}
+            <div className="flex items-center justify-between px-6 py-4 border-b border-border-gray">
+              <Link 
+                to="/" 
+                className="text-xl font-light tracking-widest text-deep-charcoal"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                LOVING YOUR SKIN
+              </Link>
+              <button 
+                className="p-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            
+            {/* Mobile Navigation */}
+            <div className="flex-1 overflow-y-auto">
+              <div className="px-6 py-8">
+                {/* User Info */}
+                {isAuthenticated && (
+                  <div className="mb-8 pb-8 border-b border-border-gray">
+                    <div className="text-sm text-text-secondary mb-2">Logged in as</div>
+                    <div className="font-medium">{user?.email}</div>
+                  </div>
+                )}
+                
+                {/* Navigation Links */}
+                <div className="space-y-4">
+                  {allNavItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      to={item.href}
+                      className={cn(
+                        'block px-4 py-3 rounded-lg text-lg transition-colors',
+                        isActive(item.href)
+                          ? 'bg-soft-pink text-deep-charcoal'
+                          : 'text-text-primary hover:bg-soft-pink-hover'
+                      )}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item.label}
+                      {item.href === '/cart' && getTotalItems() > 0 && (
+                        <span className="ml-2 text-rose-gold">({getTotalItems()})</span>
+                      )}
+                    </Link>
+                  ))}
+                </div>
+                
+                {/* Language Selector */}
+                <div className="mt-8 pt-8 border-t border-border-gray">
+                  <label className="block text-sm text-text-secondary mb-2">Language</label>
+                  <select
+                    value={language}
+                    onChange={(e) => setLanguage(e.target.value)}
+                    className="w-full px-4 py-3 text-base border border-border-gray rounded-lg bg-white"
+                  >
+                    <option value="EN">English</option>
+                    <option value="KO">한국어</option>
+                    <option value="ZH">中文</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            {/* Mobile Footer Actions */}
+            <div className="px-6 py-6 border-t border-border-gray">
+              {isAuthenticated ? (
+                <div className="space-y-3">
+                  <Link to="/profile" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Button variant="secondary" size="medium" className="w-full">
+                      My Profile
+                    </Button>
+                  </Link>
+                  <Button 
+                    variant="ghost" 
+                    size="medium" 
+                    className="w-full"
+                    onClick={() => {
+                      logout()
+                      setIsMobileMenuOpen(false)
+                    }}
+                  >
+                    Logout
+                  </Button>
+                </div>
+              ) : (
+                <div className="space-y-3">
+                  <Link to="/login" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Button variant="secondary" size="medium" className="w-full">
+                      Login
+                    </Button>
+                  </Link>
+                  <Link to="/register" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Button variant="primary" size="medium" className="w-full">
+                      Register
+                    </Button>
+                  </Link>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   )
 }
