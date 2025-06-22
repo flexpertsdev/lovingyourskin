@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { Layout } from './components/layout'
-import { ComponentDemo } from './pages/ComponentDemo'
+import { AppRoutes } from './routes'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -17,7 +17,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Layout>
-          <ComponentDemo />
+          <AppRoutes />
         </Layout>
       </BrowserRouter>
     </QueryClientProvider>
