@@ -1,13 +1,14 @@
 // Mock product service with multi-language support and certifications
 import { Product, Brand } from '../../types'
+import { transformBrandData, transformProductData } from '../../utils/transformMockData'
 import brandsData from '../../../mock-data/brands.json'
 import productsData from '../../../mock-data/products.json'
 
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
 
-// Type the imported data
-const brands = brandsData.brands as Brand[]
-const products = productsData.products as Product[]
+// Transform the imported data
+const brands = brandsData.brands.map(transformBrandData)
+const products = productsData.products.map(transformProductData)
 
 export const productService = {
   // Get all brands
@@ -22,10 +23,16 @@ export const productService = {
     return brands.find(b => b.id === idOrSlug || b.slug === idOrSlug) || null
   },
   
+  // Get all products
+  getProducts: async (): Promise<Product[]> => {
+    await delay(400)
+    return products.filter(p => p.active)
+  },
+  
   // Get products by brand
   getProductsByBrand: async (brandId: string): Promise<Product[]> => {
     await delay(400)
-    return products.filter(p => p.brandId === brandId && p.inStock)
+    return products.filter(p => p.brandId === brandId && p.active)
   },
   
   // Get products by category

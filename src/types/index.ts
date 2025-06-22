@@ -48,6 +48,7 @@ export interface Product {
   id: string
   brandId: string
   categoryId: string
+  category: string // Category name
   name: {
     en: string
     ko: string
@@ -67,30 +68,49 @@ export interface Product {
   moq: number // Minimum order quantity
   moqUnit: 'items' | 'cartons'
   itemsPerCarton: number
+  volume: string // e.g. "50ml", "100g"
+  ingredients?: string[]
   certifications: CertificationType[]
   badges?: string[]
   inStock: boolean
+  stockLevel: 'in' | 'low' | 'out'
   featured: boolean
   active: boolean
+  leadTime: string // e.g. "3-5 days"
 }
 
-export type CertificationType = 'CPNP_UK' | 'CPNP_EU' | 'CPNP_CH' | 'VEGAN' | 'CRUELTY_FREE' | 'EWG' | 'DERMATOLOGIST_TESTED' | 'CARBON_NEUTRAL'
+export type CertificationType = 'CPNP' | 'CPNP_UK' | 'CPNP_EU' | 'CPNP_CH' | 'VEGAN' | 'CRUELTY_FREE' | 'EWG' | 'DERMATOLOGIST_TESTED' | 'CARBON_NEUTRAL'
 
 // Brand types based on mock data
 export interface Brand {
   id: string
   slug: string
-  name: string
+  name: {
+    en: string
+    ko: string
+    zh: string
+  }
   tagline: string
-  description: string
+  description: {
+    en: string
+    ko: string
+    zh: string
+  }
+  story?: {
+    en: string
+    ko: string
+    zh: string
+  }
   logo: string
   heroImage: string
   establishedYear: number
   productCount: number
+  minimumOrder: number
+  country: string
   certifications: CertificationType[]
   featureTags: string[]
   technologies?: Technology[]
-  categories: Category[]
+  categories: string[]
   stats: {
     yearsInBusiness: number
     productsSold: string

@@ -11,6 +11,7 @@ interface CartState {
   
   // Actions
   loadCart: () => Promise<void>
+  refreshCart: () => Promise<void>
   addToCart: (product: Product, quantity: number) => Promise<void>
   updateQuantity: (itemId: string, quantity: number) => Promise<void>
   removeFromCart: (itemId: string) => Promise<void>
@@ -49,6 +50,10 @@ export const useCartStore = create<CartState>()(
           set({ isLoading: false })
           console.error('Failed to load cart:', error)
         }
+      },
+      
+      refreshCart: async () => {
+        await get().loadCart()
       },
       
       addToCart: async (product, quantity) => {
