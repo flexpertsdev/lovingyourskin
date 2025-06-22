@@ -39,6 +39,14 @@
         "ko": "바쿠치올 안티에이징 앰플 세트",
         "zh": "补骨脂抗衰老精华套装"
       },
+      "description": {
+        "en": "Complete anti-aging set with plant-based retinol alternative",
+        "ko": "식물성 레티놀 대체품이 함유된 완벽한 안티에이징 세트",
+        "zh": "含植物性视黄醇替代品的完整抗衰老套装"
+      },
+      "images": [
+        "/images/products/wismin-bakuchiol-set-1.jpg"
+      ],
       "price": {
         "item": 108.00,
         "carton": 648.00,
@@ -89,6 +97,14 @@
         "ko": "코튼 배리어 리페어 세럼",
         "zh": "棉花屏障修复精华"
       },
+      "description": {
+        "en": "Advanced barrier repair serum with patented Elasome technology",
+        "ko": "특허받은 엘라솜 기술이 적용된 고급 배리어 리페어 세럼",
+        "zh": "含专利Elasome技术的高级屏障修复精华"
+      },
+      "images": [
+        "/images/products/lalucell-barrier-serum-1.jpg"
+      ],
       "price": {
         "item": 32.00,
         "carton": 384.00,
@@ -140,6 +156,14 @@
         "ko": "머쉬룸 딥 하이드레이팅 크림",
         "zh": "蘑菇深层保湿霜"
       },
+      "description": {
+        "en": "Intensive hydrating cream with upcycled mushroom extract",
+        "ko": "업사이클 버섯 추출물이 함유된 집중 수분 크림",
+        "zh": "含升级再造蘑菇提取物的深层保湿霜"
+      },
+      "images": [
+        "/images/products/sunnicorn-hydrating-cream-1.jpg"
+      ],
       "price": {
         "item": 23.18,
         "carton": 278.16,
@@ -161,6 +185,14 @@
         "ko": "목화씨 시카 디펜스 배리어 크림",
         "zh": "棉籽积雪草防御屏障霜"
       },
+      "description": {
+        "en": "Barrier strengthening cream with cottonseed oil and cica complex",
+        "ko": "목화씨 오일과 시카 복합체가 함유된 배리어 강화 크림",
+        "zh": "含棉籽油和积雪草复合物的屏障强化霜"
+      },
+      "images": [
+        "/images/products/wismin-cottonseed-cream-1.jpg"
+      ],
       "price": {
         "item": 26.40,
         "carton": 316.80,
@@ -181,6 +213,14 @@
         "ko": "이-빔 하이드로겔 마스크",
         "zh": "电子束水凝胶面膜"
       },
+      "description": {
+        "en": "Patented E-Beam technology hydrogel mask for intense hydration",
+        "ko": "집중 수분 공급을 위한 특허받은 E-Beam 기술 하이드로겔 마스크",
+        "zh": "专利E-Beam技术水凝胶面膜，深层补水"
+      },
+      "images": [
+        "/images/products/lalucell-hydrogel-mask-1.jpg"
+      ],
       "price": {
         "item": 6.00,
         "carton": 144.00,
@@ -202,6 +242,14 @@
         "ko": "밤부 수딩 UV 선 에센스",
         "zh": "竹子舒缓防晒精华"
       },
+      "description": {
+        "en": "Reef-safe sun essence with bamboo extract for sensitive skin",
+        "ko": "민감한 피부를 위한 대나무 추출물이 함유된 리프세이프 선 에센스",
+        "zh": "含竹子提取物的礁石安全防晒精华，适合敏感肌"
+      },
+      "images": [
+        "/images/products/sunnicorn-sun-essence-1.jpg"
+      ],
       "price": {
         "item": 14.65,
         "carton": 175.80,

@@ -34,7 +34,14 @@ export const transformBrandData = (rawBrand: any): Brand => {
 
 export const transformProductData = (rawProduct: any): Product => {
   const name = typeof rawProduct.name === 'string' ? rawProduct.name : rawProduct.name.en
-  const description = typeof rawProduct.description === 'string' ? rawProduct.description : rawProduct.description.en
+  
+  // Handle missing description field
+  let description = 'No description available'
+  if (rawProduct.description) {
+    description = typeof rawProduct.description === 'string' 
+      ? rawProduct.description 
+      : rawProduct.description.en
+  }
   
   return {
     ...rawProduct,
