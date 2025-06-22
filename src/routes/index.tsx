@@ -6,11 +6,13 @@ import { Login, Register } from '../pages/auth'
 import { Brands } from '../pages/Brands'
 import { BrandDetail } from '../pages/BrandDetail'
 import { ProductDetail } from '../pages/ProductDetail'
+import { Test } from '../pages/Test'
 
 export const AppRoutes: React.FC = () => {
   return (
     <Routes>
       <Route path="/" element={<Landing />} />
+      <Route path="/test" element={<Test />} />
       <Route path="/components" element={<ComponentDemo />} />
       
       {/* Auth Routes */}

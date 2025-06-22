@@ -31,6 +31,8 @@ const features: Feature[] = [
   }
 ]
 
+import { Layout } from '../components/layout'
+
 export const Landing: React.FC = () => {
   const [userType, setUserType] = useState<'retailer' | 'brand' | 'other'>('retailer')
   const [formData, setFormData] = useState({
@@ -39,6 +41,7 @@ export const Landing: React.FC = () => {
     message: ''
   })
   
+  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // TODO: Handle form submission
@@ -46,7 +49,7 @@ export const Landing: React.FC = () => {
   }
   
   return (
-    <>
+    <Layout>
       {/* Hero Section */}
       <Section className="text-center bg-gradient-to-br from-soft-pink to-white">
         <Container>
@@ -155,6 +158,6 @@ export const Landing: React.FC = () => {
         </Container>
       </Section>
       </div>
-    </>
+    </Layout>
   )
 }
