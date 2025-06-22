@@ -5,6 +5,7 @@ export { authService } from './mock/auth.service'
 export { productService } from './mock/product.service'
 export { cartService } from './mock/cart.service'
 export { orderService } from './mock/order.service'
+export { dashboardService } from './mock/dashboard.service'
 
 // When switching to Firebase, just change the imports:
 // export { authService } from './firebase/auth.service'

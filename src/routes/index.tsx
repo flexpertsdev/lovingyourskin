@@ -11,6 +11,8 @@ import { Cart } from '../pages/Cart'
 import { Checkout } from '../pages/Checkout'
 import { Orders } from '../pages/Orders'
 import { OrderDetail } from '../pages/OrderDetail'
+import { Dashboard } from '../pages/Dashboard'
+import { AdminDashboard } from '../pages/admin/AdminDashboard'
 
 export const AppRoutes: React.FC = () => {
   return (
@@ -32,13 +34,17 @@ export const AppRoutes: React.FC = () => {
       <Route path="/how-it-works" element={<div className="p-8 text-center">How It Works - Coming Soon</div>} />
       <Route path="/for-brands" element={<div className="p-8 text-center">For Brands - Coming Soon</div>} />
       <Route path="/for-retailers" element={<div className="p-8 text-center">For Retailers - Coming Soon</div>} />
-      <Route path="/dashboard" element={<div className="p-8 text-center">Dashboard - Coming Soon</div>} />
+      <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/profile" element={<div className="p-8 text-center">Profile - Coming Soon</div>} />
       <Route path="/orders" element={<Orders />} />
       <Route path="/orders/:orderId" element={<OrderDetail />} />
       <Route path="/messages" element={<div className="p-8 text-center">Messages - Coming Soon</div>} />
+      
+      {/* Admin Routes */}
+      <Route path="/admin" element={<AdminDashboard />} />
+      <Route path="/admin/dashboard" element={<AdminDashboard />} />
       
       {/* 404 */}
       <Route path="*" element={<div className="p-8 text-center">404 - Page Not Found</div>} />
